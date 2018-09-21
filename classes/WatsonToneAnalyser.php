@@ -102,6 +102,9 @@ class WatsonToneAnalyser {
             case "emotional_range_big5":
                 $Decision = "has ".$EmotionResult["EmotionScore"]."% emotional range in the reviews. We suggest purchasing this book.";
                 break;
+            default :
+                $Decision = "has various emotional range in the reviews. We suggest purchasing this book.";
+                break;
         }
         return $Decision;
     }
